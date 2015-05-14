@@ -173,6 +173,9 @@ FCGISOCKET="/var/run/www/php.sock"
 FCGIUSER="www-data"
 FCGIGROUP="www-data"
 
+mkdir -p /var/run/www
+chown www-data:www-data /var/run/www
+
 if [ -e /etc/default/php-cgi ]
 then
     source /etc/default/php-cgi
